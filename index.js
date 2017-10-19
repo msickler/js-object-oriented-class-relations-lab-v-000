@@ -46,16 +46,21 @@ class Passenger {
 
 let tripId = 0
 class Trip {
-  constructor(driverId, passengerId){
+  constructor(driver, passenger) {
     this.driverId = driverId;
     this.passengerId = passengerId;
     this.id = ++tripId
     store.trips.push(this)
   }
-  driver(){
-    return store.drivers.find((driver) => { return driver.id === this.driverId })
+  
+  driver() {
+    return store.drivers.find((driver) => { 
+      return driver.id === this.driverId })
   }
-  passenger(){
-    return store.passengers.find((passenger) => { return passenger.id === this.passengerId })
+  
+  passenger() {
+    return store.passengers.find((passenger) => { 
+      return passenger.id === this.passengerId })
   }
+  
 }
