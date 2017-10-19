@@ -23,7 +23,13 @@ class Driver {
 let passengerId = 0
 class Passenger {
   constructor(name) {
-    this.name = name 
+    this.name = name
     this.id = ++ passengerId
+  }
+
+  trips() {
+    return store.strips.filter(trip => {
+      return trip.passengerId === this.id
+    })
   }
 }
