@@ -3,7 +3,7 @@ let store = { drivers: [], trips: [], passengers: []}
 let driverId = 0
 class Driver {
   constructor (name) {
-    this.id = ++ driverId
+    this.id = ++driverId
     this.name = name
   }
 
@@ -15,7 +15,7 @@ class Driver {
 
   passengers() {
     return store.passengers.filter(passenger => {
-      return passenger.driverId === this.id 
+      return passenger.driverId === this.id
     })
   }
 }
