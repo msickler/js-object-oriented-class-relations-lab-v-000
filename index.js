@@ -35,7 +35,16 @@ class Passenger {
 
   drivers() {
     return store.drivers.find(function (driver) {
-      return driver.id === this.driverId 
+      return driver.id === this.driverId
     })
+  }
+}
+
+let tripId = 0
+class Trip {
+  constructor(driverId, passengerId) {
+    this.id =++ tripId 
+    this.driverId = driverId 
+    this.passengerId = passengerId
   }
 }
