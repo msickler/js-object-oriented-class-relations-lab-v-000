@@ -32,4 +32,10 @@ class Passenger {
       return trip.passengerId === this.id
     })
   }
+
+  drivers() {
+    return store.drivers.find(function (driver) {
+      return driver.id === this.driverId 
+    })
+  }
 }
