@@ -32,13 +32,13 @@ class Passenger {
 
   trips() {
     return store.strips.filter(function (trip) {
-      return passengerId === this.id
+      return trip.passengerId === this.id
     }.bind(this))
   }
 
   drivers() {
     return store.drivers.filter(function (driver) {
-      return passengerId === this.id
+      return driver.passengerId === this.id
     }.bind(this))
   }
 }
