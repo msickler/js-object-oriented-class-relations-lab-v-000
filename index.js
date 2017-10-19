@@ -38,7 +38,7 @@ class Passenger {
   drivers() {
     return store.drivers.filter(driver => {
       return driver.id === this.driverId
-    })
+    }.bind(this))
   }
 }
 
